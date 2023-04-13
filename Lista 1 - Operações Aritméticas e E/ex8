@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ex8
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Double celsus, fahrenheit;
+            Console.WriteLine("Digite o valor da temperatura;");
+            celsus = double.Parse(Console.ReadLine());
+            fahrenheit = ((celsus) / (5) * (9) + (32));
+            Console.WriteLine(" A temperatura em Fahrenheit é; " + fahrenheit);
+            Console.WriteLine();
+        }
+    }
+}
