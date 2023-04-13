@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace projeto
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            float bas, altura, area;
+            Console.WriteLine("Digite a base do retangulo");
+            bas = float.Parse(Console.ReadLine());
+            Console.WriteLine("Digite a altura do retângulo");
+            altura = float.Parse(Console.ReadLine());
+            area = bas * altura;
+            Console.WriteLine("A área do retângulo é: " + area);
+            Console.WriteLine();
+        }
+    }
+}
