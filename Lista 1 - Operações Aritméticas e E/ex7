@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ex7
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double milha;
+            double conversao;
+            Console.WriteLine("Digite o valor da Milha para conversao");
+            milha = double.Parse(Console.ReadLine());
+            conversao = 1852*milha/1000;
+            Console.WriteLine(" A conversao é: " + conversao +"km.");
+            Console.WriteLine();
+         }
+    }
+}
