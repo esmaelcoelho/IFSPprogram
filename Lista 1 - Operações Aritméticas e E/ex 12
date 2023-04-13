@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ex12
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double prod1, prod2, prod3, prod4, prod5, soma, troco, pagamento;
+
+            Console.Write("insira o valor do produto 1: ");
+            prod1 = double.Parse(Console.ReadLine());
+            Console.Write("insira o valor do produto 2: ");
+            prod2 = double.Parse(Console.ReadLine());
+            Console.Write("insira o valor do produto 3: ");
+            prod3 = double.Parse(Console.ReadLine());
+            Console.Write("insira o valor do produto 4: ");
+            prod4 = double.Parse(Console.ReadLine());
+            Console.Write("insira o valor do produto 5: ");
+            prod5 = double.Parse(Console.ReadLine());
+
+            soma = prod1 + prod2 + prod3 + prod4 + prod5;
+            Console.WriteLine("O valor total da compra é {0}  \n", soma);
+
+            Console.Write("insira o valor recebido: R$");
+            pagamento = double.Parse(Console.ReadLine());
+
+            troco = pagamento - soma;
+
+            Console.Write(" Troco: R$ " + troco);
+
+            Console.WriteLine();
+        }
+    }
+}
