@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ex11
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double x, y, total;
+            Console.WriteLine("insira o valor de x: ");
+            x = double.Parse(Console.ReadLine());
+            Console.WriteLine("insira o valor de y: ");
+            y = double.Parse(Console.ReadLine());
+            total = Math.Pow(x, y);
+            //usasse Math.Pow para potencia.
+            Console.WriteLine("O resultado é: "+ total);
+            Console.WriteLine();
+        }
+    }
+}
