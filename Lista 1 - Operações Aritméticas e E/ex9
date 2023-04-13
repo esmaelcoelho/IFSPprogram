@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ex9
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Double raio = 0;
+            Double diametro = 0;
+            Double area = 0;
+            Console.WriteLine("Digite o valor do raio:");
+            raio = Double.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o diâmetro do circulo:");
+            diametro = Double.Parse(Console.ReadLine());
+            area = 3.14 * raio * raio;
+            Console.WriteLine("A área do circulo é : " + area);
+            Console.WriteLine();
+        }
+    }
+}
