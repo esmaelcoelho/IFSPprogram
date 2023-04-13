@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ex4
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double comprimento, altura, area;
+            Console.WriteLine(" Digite o comprimento do triângulo");
+            comprimento = double.Parse(Console.ReadLine());
+            Console.WriteLine(" Digite o valor da altura do triângulo");
+            altura = double.Parse(Console.ReadLine());
+            area = comprimento * altura / 2;
+            Console.WriteLine(" A área do triângulo é: " + area);
+            Console.WriteLine();
+        }
+    }
+}
