@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ex10
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double dolar, cota, reais;
+            Console.WriteLine("insira o valor em dolares: ");
+            dolar = double.Parse(Console.ReadLine());
+            Console.WriteLine("insira a cotação do dolar: ");
+            cota = double.Parse(Console.ReadLine());
+            reais = dolar * cota;
+            Console.WriteLine("O valor convertido para reais é: R$ "+ reais);
+            Console.WriteLine();
+        }
+    }
+}
