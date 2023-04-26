@@ -1,1 +1,29 @@
+//Entrar com dois valores quaisquer. Exibir o maior deles, se existir, caso contrário, enviar mensagem avisando que os números são idênticos. 
 
+using System;
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        int n1;
+        int n2;
+
+        Console.WriteLine("Digite um número");
+        n1 = int.Parse(Console.ReadLine());
+        Console.WriteLine("Digite um número diferente do primeiro");
+        n2 = int.Parse(Console.ReadLine());
+
+        if (n1 > n2)
+        {
+            Console.WriteLine("Número Maior é " + n1);
+        }
+        else if (n1 < n2)
+        {
+            Console.WriteLine("Número Maior é " + n2);
+        }
+        else if ((n1 == 0) && (n2 == 0)) {
+            Console.WriteLine("Os Número digitados são identicos");
+        }
+    }
+}
