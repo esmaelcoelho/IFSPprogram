@@ -1,1 +1,25 @@
 // 1. Entrar via teclado, com dois valores distintos. Exibir o maior deles. 
+using System;
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        int n1;
+        int n2;
+
+        Console.WriteLine("Digite um número");
+        n1 = int.Parse(Console.ReadLine());
+        Console.WriteLine("Digite um número diferente do primeiro");
+        n2 = int.Parse(Console.ReadLine());
+
+        if (n1 > n2)
+        {
+            Console.WriteLine("Número Maior é " + n1);
+        }
+        else
+        {
+            Console.WriteLine("Nùmero Maior é " + n2);
+        }
+    }
+}
