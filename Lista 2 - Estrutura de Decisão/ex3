@@ -1,1 +1,36 @@
+Entrar via teclado com três valores quaisquer. Exibir o(s) maior(es) deles se existir(em). 
+using System;
 
+class Program
+{
+    public static void Main(string[] args)
+    {
+        int n1;
+        int n2;
+        int n3;
+
+        Console.WriteLine("Digite um número");
+        n1 = int.Parse(Console.ReadLine());
+        Console.WriteLine("Digite segundo número");
+        n2 = int.Parse(Console.ReadLine());
+        Console.WriteLine("Digite terceiro número");
+        n3 = int.Parse(Console.ReadLine());
+
+        if (n1 > n2 && n1 > n3)
+        {
+            Console.WriteLine("Número Maior é " + n1);
+        }
+        else if (n2 > n1 && n2 > n3)
+        {
+            Console.WriteLine("Número Maior é " + n2);
+        }
+        else if (n3 > n1 && n3 > n2)
+        {
+            Console.WriteLine("Número Maior é " + n3);
+        }
+        else if ((n1 == 0) && (n2 == 0) && (n3 == 0)) 
+        {
+            Console.WriteLine("Os Número digitados são identicos");
+        }
+    }
+}
