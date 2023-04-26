@@ -1,1 +1,30 @@
+//Calcular e exibir a área de um retângulo, a partir dos valores da base e altura que serão digitados. Se a área for maior que 100, exibir a mensagem “Terreno grande”, caso contrário, exibir a mensagem “Terreno pequeno”
 
+using System;
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        int bas;
+        int altura;
+        int total;
+
+        Console.WriteLine("Digite a base");
+        bas = int.Parse(Console.ReadLine());
+        Console.WriteLine("Digite altura");
+        altura = int.Parse(Console.ReadLine());
+
+        total = (altura * bas) / 2;
+
+        if (total >= 100)
+        {
+            Console.WriteLine("Terreno é Grande");
+            Console.WriteLine("Com a Area de " + total);
+        }
+        else 
+        {
+            Console.WriteLine("Terreno Pequeno");
+        }
+     }
+}
