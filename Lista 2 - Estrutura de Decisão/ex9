@@ -16,7 +16,7 @@ class Program
 
         r = peso / (altura * altura);
 
-        if (sexo == "feminino" || sexo == "Feminino")
+        if (sexo == "feminino" | sexo == "Feminino")
         {
             if (r < 19) {
                 Console.WriteLine("Abaixo do peso.");
@@ -27,7 +27,7 @@ class Program
                 Console.WriteLine("Acima do peso.");
             }
         }
-        else if (sexo == "masculino" || sexo == "Masculino")
+        else if (sexo == "masculino" | sexo == "Masculino")
         {
             if (r < 20) {
                 Console.WriteLine("Abaixo do peso.");
