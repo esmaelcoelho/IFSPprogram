@@ -15,7 +15,7 @@ class Program
         Console.WriteLine("Digite altura");
         altura = int.Parse(Console.ReadLine());
 
-        total = (altura * bas) / 2;
+        total = altura * bas;
 
         if (total >= 100)
         {
