@@ -1,0 +1,13 @@
+//Exibir a tabuada do número cinco no intervalo de um a dez
+using System;
+class Program {
+public static void Main (string[] args) {
+int numero = 5;
+int contador = 1;
+do
+{
+    Console.WriteLine(numero + " x " + contador + " = " + (numero * contador));
+    contador++;
+} while (contador <= 10);
+}
+} 
