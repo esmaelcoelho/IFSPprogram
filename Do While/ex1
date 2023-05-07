@@ -1,0 +1,21 @@
+//Criar uma rotina de entrada que aceite somente um valor positivo.
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+            int n;
+            Console.WriteLine("Digite um número positivo");
+            do
+            {
+                n = int.Parse(Console.ReadLine());
+                if (n == 0)
+                {
+                    Console.WriteLine("Número ZERO. fim de programa");
+                }
+                else if (n < 0)
+                    Console.WriteLine("Número Negativo. fim de programa");
+                else
+                    Console.WriteLine("Digite proximo número");
+            } while (n > 0);
+  }
+}
