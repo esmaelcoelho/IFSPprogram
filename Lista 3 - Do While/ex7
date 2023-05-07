@@ -1,0 +1,21 @@
+//Exibir a tabuada dos valores de um a vinte, no intervalo de um a dez. Entre as tabuadas,
+solicitar que o usuário pressione uma tecla.
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        int i = 1;
+        do {
+            Console.WriteLine("");
+            Console.WriteLine("Tabuada do {0}:", i);
+            int j = 1;
+            do {
+                Console.WriteLine("{0} x {1} = {2}", i, j, i * j);
+                j++;
+            } while (j <= 10);
+            Console.WriteLine("Pressione uma tecla para continuar...");
+            Console.ReadKey();
+            i++;
+        } while (i <= 20);
+    }
+}
