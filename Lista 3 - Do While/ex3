@@ -1,0 +1,22 @@
+//Entrar via teclado com o sexo de determinado usuário, aceitar somente “F” ou “M” como
+respostas válidas
+
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+            string sexo;
+do
+{
+    Console.WriteLine("Digite o sexo do usuário (F ou M): ");
+    sexo = Console.ReadLine();
+
+} while (sexo != "F" && sexo != "M");
+    
+if (sexo == "M"){
+  Console.WriteLine("SEXO MASCULINO. FIM DE PROGRAMA");}
+    else {
+      Console.WriteLine("SEXO FEMININO. FIM DE PROGRAMA");
+    } 
+  }
+}
