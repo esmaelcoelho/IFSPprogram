@@ -1,0 +1,30 @@
+//Entrar com dois valores via teclado, onde o segundo deverá ser maior que o primeiro. Caso
+contrário solicitar novamente apenas o segundo valor.
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+            int n1;
+            int n2;
+            Console.WriteLine("Digite um número ");
+            n1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite segundo número ");          
+            do
+            {
+                n2 = int.Parse(Console.ReadLine());
+                if (n2 == n1)
+                {
+                    Console.WriteLine("números iguais. fim de programa");
+                }
+                else if (n1 > n2)
+                {
+                    Console.WriteLine("Digite um valor para o segundo novamente");
+                }
+                else 
+                {
+                    Console.WriteLine ("O segundo número é Maior que o primeiro. fim de programa");
+                }
+            } 
+            while (n1 > n2);
+  }
+}
