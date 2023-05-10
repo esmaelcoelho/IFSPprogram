@@ -1,0 +1,32 @@
+// Calcular o fatorial de um valor que será digitado. Este valor não poderá ser negativo. Enviar
+mensagem de erro e solicitar o valor novamente, se necessário. Perguntar se o usuário
+deseja ou não fazer um novo cálculo, consistir a resposta em “S” ou “N”.
+N! = N x N-1 x N-2 x N-3 x ....... x (N - (N-1))
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        char continuar;
+
+        do {
+            Console.Write("Digite um número inteiro não negativo: ");
+            int numero = int.Parse(Console.ReadLine());
+
+            while (numero < 0) {
+                Console.WriteLine("Valor inválido. Digite novamente:");
+                numero = int.Parse(Console.ReadLine());
+            }
+
+            int fatorial = 1;
+
+            for (int i = numero; i > 0; i--) {
+                fatorial *= i;
+            }
+
+            Console.WriteLine($"{numero}! = {fatorial}");
+
+            Console.Write("Deseja calcular o fatorial de outro número? (S/N) ");
+            continuar = char.Parse(Console.ReadLine());
+        } while (continuar == 'S' || continuar == 's');
+    }
+}
