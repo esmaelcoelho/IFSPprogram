@@ -1,0 +1,17 @@
+//Exibir os trinta primeiros valores da série de Fibonacci. A série: 1, 1, 2, 3, 5, 8, ..
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+int num1 = 0;
+int num2 = 1;
+int count = 0;
+do {
+    int num3 = num1 + num2;
+    Console.Write(num3 + " ");
+    num1 = num2;
+    num2 = num3;
+    count++;
+} while (count < 30);
+        }
+}
