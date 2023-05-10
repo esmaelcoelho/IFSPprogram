@@ -1,0 +1,68 @@
+// Entrar via teclado com “N” valores quaisquer. O valor “N” (que representa a quantidade de
+números) será digitado, deverá ser positivo, mas menor que vinte. Caso a quantidade não
+satisfaça a restrição, enviar mensagem de erro e solicitar o valor novamente. Após a
+digitação dos “N” valores, exibir:
+a. O maior valor;
+b. O menor valor;
+c. A soma dos valores;
+d. A média aritmética dos valores;
+e. A porcentagem de valores que são positivos;
+f. A porcentagem de valores negativos;
+
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+Console.Write("Digite a quantidade de números que deseja inserir (valor positivo e menor que 20): ");
+int n = 0;
+bool validInput = int.TryParse(Console.ReadLine(), out n);
+
+while (!validInput || n <= 0 || n >= 20) {
+    Console.WriteLine("Valor inválido. Digite novamente.");
+    Console.Write("Digite a quantidade de números que deseja inserir (valor positivo e menor que 20): ");
+    validInput = int.TryParse(Console.ReadLine(), out n);
+}
+
+int count = 0;
+int max = int.MinValue;
+int min = int.MaxValue;
+int sum = 0;
+int posCount = 0;
+int negCount = 0;
+
+do {
+    Console.Write("Digite um valor: ");
+    int num = 0;
+    validInput = int.TryParse(Console.ReadLine(), out num);
+    if (validInput) {
+        sum += num;
+        if (num > max) {
+            max = num;
+        }
+        if (num < min) {
+            min = num;
+        }
+        if (num > 0) {
+            posCount++;
+        } else if (num < 0) {
+            negCount++;
+        }
+        count++;
+    } else {
+        Console.WriteLine("Valor inválido. Digite novamente.");
+    }
+} while (count < n);
+
+double avg = (double)sum / count;
+double posPercent = (double)posCount / count * 100;
+double negPercent = (double)negCount / count * 100;
+
+Console.WriteLine("O maior valor é: " + max);
+Console.WriteLine("O menor valor é: " + min);
+Console.WriteLine("A soma dos valores é: " + sum);
+Console.WriteLine("A média aritmética dos valores é: " + avg);
+Console.WriteLine("A porcentagem de valores que são positivos é: " + posPercent + "%");
+Console.WriteLine("A porcentagem de valores que são negativos é: " + negPercent + "%");
+
+        }
+}
