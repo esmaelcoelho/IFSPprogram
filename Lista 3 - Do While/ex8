@@ -1,0 +1,14 @@
+//Exibir a soma dos números inteiros positivos do intervalo de um a cem.
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+        int num = 1;
+int sum = 0;
+do {
+    sum += num;
+    num++;
+} while (num <= 100);
+Console.WriteLine("A soma dos números inteiros positivos do intervalo de 1 a 100 é: " + sum);
+        }
+}
