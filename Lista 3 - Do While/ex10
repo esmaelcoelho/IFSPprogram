@@ -1,0 +1,37 @@
+//Entrar via teclado com dez valores positivos. Consistir a digitação e enviar mensagem de
+erro, se necessário. Após a digitação, exibir:
+a. O maior valor;
+b. A soma dos valores;
+c. A média aritmética dos valores;
+
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+int count = 0;
+int max = int.MinValue;
+int sum = 0;
+
+do {
+    Console.Write("Digite um valor positivo: ");
+    int num = 0;
+    bool validInput = int.TryParse(Console.ReadLine(), out num);
+    if (validInput && num > 0) {
+        sum += num;
+        if (num > max) {
+            max = num;
+        }
+        count++;
+    } else {
+        Console.WriteLine("Valor inválido. Digite novamente.");
+    }
+} while (count < 10);
+
+double avg = (double)sum / count;
+
+Console.WriteLine("O maior valor é: " + max);
+Console.WriteLine("A soma dos valores é: " + sum);
+Console.WriteLine("A média aritmética dos valores é: " + avg);
+
+        }
+}
