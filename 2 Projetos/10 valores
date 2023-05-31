@@ -1,0 +1,39 @@
+//Elaborar um programa que permita a digitação de 10 valores inteiros. Finalizada a digitação dos valores, 
+deverá calcular a média aritmética deles e informar a QUANTIDADE de valores 
+digitados que são maiores do que a média calculada.
+
+Elaborar um programa que permita a digitação de 10 valores inteiros. 
+Finalizada a digitação dos valores, deverá calcular a média aritmética deles e informar a
+QUANTIDADE de valores digitados que são maiores do que a média calculada.
+
+using System;
+
+class Program {
+    static void Main(string[] args) {
+        // solicita a digitação de 10 valores inteiros
+        int[] valores = new int[10];
+        for (int i = 0; i < 10; i++) {
+            Console.Write($"Digite o {i+1}º valor: ");
+            valores[i] = int.Parse(Console.ReadLine());
+        }
+
+        // calcula a média aritmética dos valores digitados
+        double media = 0;
+        foreach (int valor in valores) {
+            media += valor;
+        }
+        media /= valores.Length;
+
+        // conta a quantidade de valores digitados que são maiores do que a média calculada
+        int maiores = 0;
+        foreach (int valor in valores) {
+            if (valor > media) {
+                maiores++;
+            }
+        }
+
+        // exibe o resultado
+        Console.WriteLine($"A média aritmética dos valores digitados é {media:F2}.");
+        Console.WriteLine($"{maiores} valores digitados são maiores do que a média calculada.");
+    }
+}
