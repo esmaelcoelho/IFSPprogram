@@ -1,0 +1,66 @@
+using System;
+using System.Linq;
+
+namespace TabelaDeGastos
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] motores = new string[15];
+            double[] gastos = new double[15];
+            int opcao;
+
+            do
+            {
+                Console.WriteLine("TABELA DE GASTOS");
+                Console.WriteLine("0. Sair");
+                Console.WriteLine("1. Lançar gastos");
+                Console.WriteLine("2. Mostrar gastos");
+                Console.WriteLine("3. Motor que mais gerou gasto");
+                Console.WriteLine("-----------------------");
+                Console.Write("Sua opção: ");
+                opcao = int.Parse(Console.ReadLine());
+                Console.WriteLine();
+
+                switch (opcao)
+                {
+                    case 1:
+                        Console.Write("Qual motor? ");
+                        string motor = Console.ReadLine();
+                        Console.Write("Qual valor? ");
+                        double valor = double.Parse(Console.ReadLine());
+                        int index = Array.IndexOf(motores, motor);
+                        if (index >= 0)
+                        {
+                            gastos[index] += valor;
+                            Console.WriteLine($"Gasto de {valor} registrado para o motor {motor}.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Motor não encontrado.");
+                        }
+                        break;
+                    case 2:
+                        for (int i = 0; i < motores.Length; i++)
+                        {
+                            Console.WriteLine($"{motores[i]}: R${gastos[i]:F2}");
+                        }
+                        break;
+                    case 3:
+                        int indexMax = Array.IndexOf(gastos, gastos.Max());
+                        Console.WriteLine($"O motor que mais gerou gasto foi o {motores[indexMax]}, com um total de R${gastos[indexMax]:F2}.");
+                        break;
+                    case 0:
+                        Console.WriteLine("Saindo...");
+                        break;
+                    default:
+                        Console.WriteLine("Opção inválida.");
+                        break;
+                }
+
+                Console.WriteLine();
+            } while (opcao != 0);
+        }
+    }
+}
