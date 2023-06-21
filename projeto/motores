@@ -13,7 +13,7 @@ internal class Program
 
         do
         {
-            Console.Write("Digite o número do motor: ");
+            Console.Write("Digite do motor: ");
             qualMotor = int.Parse(Console.ReadLine());  
         }
         while (qualMotor < 1 || qualMotor > 15);
@@ -23,15 +23,14 @@ internal class Program
         {
 
             Console.Write("Digite o valor do gasto: ");
-            valor = double.Parse(Console.ReadLine()); //armazena na variavel valor
+            valor = double.Parse(Console.ReadLine());
 
 
             if (valor >= 0)
             {
                 Console.Clear();
                 Console.WriteLine("Gasto lançado com sucesso!");
-                // Ler e validar o valor do gasto digitado pelo usuário
-
+              
                 gastosMotores[qualMotor-1] += valor;
            
             }
@@ -39,7 +38,7 @@ internal class Program
             else
             {
                 Console.Clear();
-                Console.WriteLine("Valor inválido. Digite novamente: ");
+                Console.WriteLine("inválido. ");
             }
         } while (valor <= 0);
 
@@ -49,12 +48,12 @@ internal class Program
         Console.Clear();
         Console.WriteLine("Gastos:");
 
-        double totalGastos = 0; // variável para armazenar o valor total dos gastos
+        double totalGastos = 0; 
 
         for (int i = 0; i < 15; i++)
         {
-            Console.WriteLine($"Motor {i + 1}: R$ {gastosMotores[i]}"); // exibe gasto de cada motor
-            totalGastos += gastosMotores[i]; // adiciona o gasto atual ao total
+            Console.WriteLine($"Motor {i + 1}: R$ {gastosMotores[i]}"); 
+            totalGastos += gastosMotores[i];
         }
 
         Console.WriteLine($"Valor total Gasto: R$ {totalGastos}");
@@ -77,7 +76,7 @@ internal class Program
             }
         }
 
-        if (maiorGasto > 0) //verifica se foi lançado valor em algum motor.
+        if (maiorGasto > 0) 
             
             Console.WriteLine($"Motor que mais gastou: {motorMaisGastou + 1} (R$ {maiorGasto})");
 
@@ -108,16 +107,16 @@ internal class Program
             {
                 opcao = Console.ReadLine();
 
-            } while (!ValidarOpcao(opcao));// while final 2
+            } while (!ValidarOpcao(opcao));
 
             if (opcao == "0")
             {
 
-               sair = true; //sair do programa
+               sair = true; 
             }
             if (opcao == "1")
             {
-                lancargastos(); //chama função para lancar gastos
+                lancargastos();
             }
 
             if (opcao == "2")
@@ -133,7 +132,7 @@ internal class Program
             }
             Console.WriteLine();
 
-        } while (!sair);// while final 1
+        } while (!sair);
     }
 
 }
